@@ -23,5 +23,5 @@ jobs:
       - name: "Variable de entorno"
         run: |
           echo "La plataforma es: $platform"
-          echo "Region: {{ env.region }}"
-          echo "Cuenta: {{ env.account }}"
+          echo "Region: ${{ env.region }}"
+          echo "Cuenta: ${{ env.account }}"
