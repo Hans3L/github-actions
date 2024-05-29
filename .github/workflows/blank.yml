@@ -33,6 +33,8 @@ jobs:
           echo "Password: ${{ env.password }}"
           echo "Username: ${{ env.username }}"
 
+          echo "Project Version ${{ vars.PROJECT_VERSION }}"
+
       - name: "Mostrando variable por defecto"
         run: |
           echo "Evento: ${{toJSON(github.event)}}"
