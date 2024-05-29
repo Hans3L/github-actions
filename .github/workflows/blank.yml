@@ -13,6 +13,9 @@ jobs:
       region: us-east-2
       account: 6544711100
 
+      username: ${{secrets.USERNAME}}
+      password: ${{secrets.PASSWORD}}
+
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
@@ -26,6 +29,9 @@ jobs:
           echo "La plataforma es: $platform"
           echo "Region: ${{ env.region }}"
           echo "Cuenta: ${{ env.account }}"
+
+          echo "Password: ${{ env.password }}"
+          echo "Username: ${{ env.username }}"
 
       - name: "Mostrando variable por defecto"
         run: |
